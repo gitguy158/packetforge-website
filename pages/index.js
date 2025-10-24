@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" style={{padding:'40px 0', background:'#050505'}>
+        <section id="services" style={{padding:'40px 0', background:'#050505'}}>
           <div className="container">
             <h2 style={{color:'var(--gold)'}}>Precision Networking for Modern Business</h2>
             <p className="muted">At PacketForge, we design, deploy, and manage high-performance network infrastructures for businesses that demand reliability and security.</p>
