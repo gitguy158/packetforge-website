@@ -1,0 +1,1 @@
+Replace logo.png with your PacketForge logo. Keep name as /public/logo.png
