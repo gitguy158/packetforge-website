@@ -80,7 +80,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
       </main>
 
       <footer style={{borderTop:'1px solid #111', padding:'24px 0', textAlign:'center'}} className="muted">
