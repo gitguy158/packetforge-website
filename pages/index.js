@@ -5,6 +5,12 @@ export default function Home() {
   return (
     <>
       <Head>
+      <meta property="og:title" content="PacketForge — Secure Networking Solutions"/>
+      <meta property="og:description" content="Bespoke network architecture & VPN solutions built for security and performance."/>
+      <meta property="og:image" content="/og-linkedin.png"/>
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="627"/>
+      <meta name="theme-color" content="#050505"/>
         <title>PacketForge — Secure Networking Solutions</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
