@@ -5,12 +5,6 @@ export default function Home() {
   return (
     <>
       <Head>
-      <meta property="og:title" content="PacketForge — Secure Networking Solutions"/>
-      <meta property="og:description" content="Bespoke network architecture & VPN solutions built for security and performance."/>
-      <meta property="og:image" content="/og-linkedin.png"/>
-      <meta property="og:image:width" content="1200"/>
-      <meta property="og:image:height" content="627"/>
-      <meta name="theme-color" content="#050505"/>
         <title>PacketForge — Secure Networking Solutions</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -80,7 +74,6 @@ export default function Home() {
                 <textarea name="message" placeholder="How can we help?" required style={{width:'100%', marginTop:12, padding:12, borderRadius:6, border:'1px solid #222', background:'#070707', color:'#eee'}} />
                 <div style={{marginTop:12, display:'flex', gap:12}}>
                   <button type="submit" className="btn">Request a Consultation</button>
-                  <div style={{alignSelf:'center'}} className="muted">Or email: thetibbittsguy@gmail.com</div>
                 </div>
               </form>
             </div>
