@@ -54,9 +54,9 @@ export default function Home() {
 
       <header style={{ borderBottom: '1px solid #111' }}>
         <div className="container" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'18px 0' }}>
-          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <img src="/logo.png" alt="PacketForge logo" style={{ width:40, height:40, objectFit:'contain' }} />
-            <div style={{ fontWeight:700, letterSpacing:1 }}>PACKETFORGE</div>
+          <div>
+            <img src="/packetforge-logo2.png" alt="PacketForge logo" style={{ width:100, height:100, objectFit:'contain' }} />
+          </div>
           </div>
 
           {/* Updated Navigation */}
@@ -86,15 +86,16 @@ export default function Home() {
           <div className="container">
             <h2 style={{ color:'var(--gold)' }}>About PacketForge</h2>
             <p className="muted" style={{ maxWidth:780 }}>
-              PacketForge was built in 2016 on the principle that secure, high‑performance networking should be accessible,
+              PacketForge was built on the principle that secure, high‑performance networking should be accessible,
               reliable, and engineered with precision. We specialise in designing and deploying bespoke network
               infrastructures that enable businesses to operate with confidence.
             </p>
 
             <h3 style={{ marginTop:32, color:'#eee' }}>About the Managing Director</h3>
             <p className="muted" style={{ maxWidth:780 }}>
-              PacketForge is led by Guy Tibbitts, an experienced IT engineer with a strong background
-              in network architecture, infrastructure deployment, and operational security. Guy has spent years building resilient systems, and helping businesses modernise their connectivity.
+              PacketForge is led by Guy Tibbitts, an experienced IT engineer and instructor with a strong background
+              in network architecture, infrastructure deployment, and operational security. Guy has spent years training
+              engineers, building resilient systems, and helping businesses modernise their connectivity.
             </p>
 
             <p className="muted" style={{ maxWidth:780 }}>
