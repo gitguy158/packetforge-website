@@ -77,7 +77,7 @@ export default function Home() {
             <img
               src="/packetforge-logo2.png"
               alt="PacketForge logo"
-              style={{ width: 100, height: 100, objectFit: 'contain' }}
+              style={{ width: 150, height: 150, objectFit: 'contain' }}
             />
           </div>
 
