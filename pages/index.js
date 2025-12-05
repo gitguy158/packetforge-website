@@ -97,20 +97,6 @@ export default function Home() {
       </header>
 
       <main>
-        {/* Intro blurb */}
-        <section style={{ padding: '32px 0 16px', textAlign: 'center' }}>
-          <div className="container">
-            <p
-              className="muted fade-in"
-              style={{ maxWidth: 760, margin: '0 auto', fontSize: 18 }}
-            >
-              PacketForge designs and operates secure, high-performance networks for
-              organisations that demand reliability, resilience, and clear technical
-              accountability.
-            </p>
-          </div>
-        </section>
-
         {/* Hero */}
         <section style={{ padding: '60px 0', textAlign: 'center' }}>
           <div className="container fade-in">
@@ -205,7 +191,7 @@ export default function Home() {
               Ready to Strengthen Your Network?
             </h2>
             <p className="muted">
-              Get in touch for a free consultation or network health check. We'll analyse
+              Do you have any questions on how we can help? Get in touch for a free consultation or network health check. We'll analyse
               your existing setup and show you where performance and security can be
               forged stronger.
             </p>
@@ -296,7 +282,7 @@ export default function Home() {
           <div className="container fade-in">
             <h2 style={{ color: 'var(--gold)' }}>About PacketForge</h2>
             <p className="muted" style={{ maxWidth: 780 }}>
-              PacketForge was built on the principle that secure, high-performance
+              PacketForge was founded in 2016 and since then we have built on the principle that secure, high-performance
               networking should be accessible, reliable, and engineered with precision.
               We specialise in designing and deploying bespoke network infrastructures
               that enable businesses to operate with confidence.
@@ -304,10 +290,8 @@ export default function Home() {
 
             <h3 style={{ marginTop: 32, color: '#eee' }}>About the Managing Director</h3>
             <p className="muted" style={{ maxWidth: 780 }}>
-              PacketForge is led by Guy Tibbitts, an experienced IT engineer and
-              instructor with a strong background in network architecture, infrastructure
-              deployment, and operational security. Guy has spent years training
-              engineers, building resilient systems, and helping businesses modernise
+              PacketForge is led by Guy Tibbitts, an experienced IT engineer with a strong background in network architecture, infrastructure
+              deployment, and operational security. Guy has spent years building resilient systems, and helping businesses modernise
               their connectivity.
             </p>
 
