@@ -1,51 +1,37 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(405).json({ message: 'Method not allowed' })
-    return
-  }
-  const { name, email, message } = req.body || {}
-  if (!name || !email || !message) {
-    res.status(400).json({ message: 'Missing fields' })
-    return
-  }
-
-  const {
-    SMTP_HOST,
-    SMTP_PORT,
-    SMTP_USER,
-    SMTP_PASS,
-    CONTACT_TO_EMAIL
-  } = process.env
-
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !CONTACT_TO_EMAIL) {
-    res.status(500).json({ message: 'Email not configured on server' })
-    return
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: Number(SMTP_PORT || 587),
-      secure: false,
-      auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS
-      }
-    })
+    const { name, email, company, message } = req.body;
 
-    await transporter.sendMail({
-      from: `"PacketForge Website" <${SMTP_USER}>`,
-      to: CONTACT_TO_EMAIL,
-      subject: `New contact from ${name} <${email}>`,
-      text: message + '\n\nReply to: ' + email,
-      html: `<p>${message.replace(/\n/g,'<br>')}</p><p>Reply to: <a href="mailto:${email}">${email}</a></p>`
-    })
+    if (!name || !email || !message) {
+      return res.status(400).json({ message: 'Missing required fields.' });
+    }
 
-    res.status(200).json({ message: 'Message sent' })
+    // Send the email
+    await resend.emails.send({
+      from: 'PacketForge Website <noreply@packetforge.co.uk>',
+      to: 'guy.tibbitts@packetforge.co.uk',
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Company:</strong> ${company || 'Not provided'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+    });
+
+    return res.status(200).json({ message: 'Message sent successfully!' });
   } catch (err) {
-    console.error(err)
-    res.status(500).json({ message: 'Error sending email' })
+    console.error(err);
+    return res.status(500).json({ message: 'Failed to send message.' });
   }
 }
