@@ -232,6 +232,19 @@ export default function Home() {
                       color: '#eee',
                     }}
                   />
+                  <input
+                    name="company"
+                    placeholder="Your company (optional)"
+                    autoComplete="organization"
+                    style={{
+                    padding: 10,
+                    borderRadius: 6,
+                    border: '1px solid #222',
+                    background: '#070707',
+                    color: '#eee',
+                    gridColumn: 'span 2',
+                  }}
+                />
                 </div>
                 <textarea
                   name="message"
