@@ -298,7 +298,7 @@ export default function Home() {
               PacketForge was founded in 2016 and since then we have built on the principle that secure, high-performance
               networking should be accessible, reliable, and engineered with precision.
               We specialise in designing and deploying bespoke network infrastructures
-              that enable businesses to operate with confidence.
+              that enable businesses to operate with confidence all accross the UK.
             </p>
 
             <h3 style={{ marginTop: 32, color: '#eee' }}>About the Managing Director</h3>
