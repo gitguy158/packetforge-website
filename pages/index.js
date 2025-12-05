@@ -97,8 +97,23 @@ export default function Home() {
       </header>
 
       <main>
-        <section style={{ padding: '60px 0', textAlign: 'center' }}>
+        {/* Intro blurb */}
+        <section style={{ padding: '32px 0 16px', textAlign: 'center' }}>
           <div className="container">
+            <p
+              className="muted fade-in"
+              style={{ maxWidth: 760, margin: '0 auto', fontSize: 18 }}
+            >
+              PacketForge designs and operates secure, high-performance networks for
+              organisations that demand reliability, resilience, and clear technical
+              accountability.
+            </p>
+          </div>
+        </section>
+
+        {/* Hero */}
+        <section style={{ padding: '60px 0', textAlign: 'center' }}>
+          <div className="container fade-in">
             <h1 style={{ fontSize: 42, margin: 0 }}>
               Forging the Future of Secure Connectivity
             </h1>
@@ -136,33 +151,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ABOUT SECTION */}
-        <section id="about" style={{ padding: '40px 0', background: '#0a0a0a' }}>
-          <div className="container">
-            <h2 style={{ color: 'var(--gold)' }}>About PacketForge</h2>
-            <p className="muted" style={{ maxWidth: 780 }}>
-              PacketForge was built on the principle that secure, high-performance
-              networking should be accessible, reliable, and engineered with precision.
-              We specialise in designing and deploying bespoke network infrastructures
-              that enable businesses to operate with confidence.
-            </p>
-
-            <h3 style={{ marginTop: 32, color: '#eee' }}>About the Managing Director</h3>
-            <p className="muted" style={{ maxWidth: 780 }}>
-              PacketForge is led by Guy Tibbitts, an experienced IT engineer and
-              instructor with a strong background in network architecture, infrastructure
-              deployment, and operational security. Guy has spent years training
-              engineers, building resilient systems, and helping businesses modernise
-              their connectivity.
-            </p>
-
-            <p className="muted" style={{ maxWidth: 780 }}>
-              His mission is simple: forge networks that are fast, secure, and built
-              to last.
-            </p>
-          </div>
-        </section>
-
         {/* SERVICES */}
         <section id="services" style={{ padding: '40px 0', background: '#050505' }}>
           <div className="container">
@@ -182,25 +170,25 @@ export default function Home() {
                 marginTop: 22,
               }}
             >
-              <div className="card">
+              <div className="card card-animated">
                 <h3>Virtual Private Networks (VPNs)</h3>
                 <p className="muted">
                   Encrypted, high-speed, zero-trust connectivity for remote teams.
                 </p>
               </div>
-              <div className="card">
+              <div className="card card-animated">
                 <h3>Corporate Network Architecture</h3>
                 <p className="muted">
                   Tailored LAN, WAN, and hybrid network designs for all scales.
                 </p>
               </div>
-              <div className="card">
+              <div className="card card-animated">
                 <h3>Cloud Integration</h3>
                 <p className="muted">
                   Secure bridges between your on-premise systems and the cloud.
                 </p>
               </div>
-              <div className="card">
+              <div className="card card-animated">
                 <h3>Network Monitoring &amp; Support</h3>
                 <p className="muted">
                   Real-time diagnostics and proactive management.
@@ -302,6 +290,70 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ABOUT at the bottom */}
+        <section id="about" style={{ padding: '40px 0', background: '#0a0a0a' }}>
+          <div className="container fade-in">
+            <h2 style={{ color: 'var(--gold)' }}>About PacketForge</h2>
+            <p className="muted" style={{ maxWidth: 780 }}>
+              PacketForge was built on the principle that secure, high-performance
+              networking should be accessible, reliable, and engineered with precision.
+              We specialise in designing and deploying bespoke network infrastructures
+              that enable businesses to operate with confidence.
+            </p>
+
+            <h3 style={{ marginTop: 32, color: '#eee' }}>About the Managing Director</h3>
+            <p className="muted" style={{ maxWidth: 780 }}>
+              PacketForge is led by Guy Tibbitts, an experienced IT engineer and
+              instructor with a strong background in network architecture, infrastructure
+              deployment, and operational security. Guy has spent years training
+              engineers, building resilient systems, and helping businesses modernise
+              their connectivity.
+            </p>
+
+            <p className="muted" style={{ maxWidth: 780 }}>
+              His mission is simple: forge networks that are fast, secure, and built
+              to last.
+            </p>
+          </div>
+        </section>
+
+        {/* REVIEWS after About */}
+        <section style={{ padding: '40px 0', background: '#050505' }}>
+          <div className="container">
+            <h2 style={{ color: 'var(--gold)', textAlign: 'center' }}>
+              What Our Clients Say
+            </h2>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))',
+                gap: 18,
+                marginTop: 22,
+              }}
+            >
+              <div className="testimonial-card fade-in">
+                <p className="muted">
+                  "Guy and his team were amazing, they were very professional and we are
+                  very happy with our new network."
+                </p>
+                <p style={{ marginTop: 12, fontWeight: 500 }}>
+                  Darren S — Nottingham
+                </p>
+              </div>
+
+              <div className="testimonial-card fade-in">
+                <p className="muted">
+                  "Couldn't recommend PacketForge enough."
+                </p>
+                <p style={{ marginTop: 12, fontWeight: 500 }}>
+                  Mike P — Leicester
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer
@@ -313,6 +365,47 @@ export default function Home() {
           <div style={{ marginTop: 6 }}>© 2025 PacketForge. All rights reserved.</div>
         </div>
       </footer>
+
+      {/* Subtle animations & hover effects */}
+      <style jsx>{`
+        .fade-in {
+          animation: fadeInUp 0.6s ease-out;
+        }
+
+        .card-animated {
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card-animated:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .testimonial-card {
+          padding: 18px;
+          border-radius: 10px;
+          border: 1px solid #222;
+          background: #070707;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .testimonial-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+          border-color: var(--gold);
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(8px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </>
   )
 }
