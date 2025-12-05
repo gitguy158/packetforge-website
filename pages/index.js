@@ -145,7 +145,7 @@ export default function Home() {
             </h2>
             <p className="muted">
               At PacketForge, we design, deploy, and manage high-performance network
-              infrastructures for businesses that demand reliability and security.
+              infrastructures for businesses that demand reliability and security. Whether you are a small team or a large company, here at PacketForge we can cater for all your networking needs. 
             </p>
 
             <div
